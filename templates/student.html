@@ -1,0 +1,67 @@
+{% extends 'common_student.html' %}
+
+{% block common_student %}
+
+   <div class="student">
+           <div class="container">
+          <div class="row min-height">
+              <div class="col-sm-12">
+                             
+                            <div class="row main_boder">
+                                <div class="col-sm-7">
+                                     <h3 class="appointmnet_list">My Appointment</h3>
+                                </div>
+                                <div class="col-sm-5">
+                                      <form class="form-inline my-2 my-lg-0" method="GET" action="">
+                                          <input class="form-control mr-sm-2" type="text" name="q" placeholder="Search By Teacher Name" placeholder="Search With Name" aria-label="Search">
+                                          <button class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Search">Search</button>
+                                       </form>
+                                </div>
+ 
+                            </div>
+                             
+                             <table class="table">
+                                 <thead>
+                                  <tr>
+                                    <th scope="col">Appointment With</th>
+                                    <th scope="col">Date</th>
+                                    <th scope="col">Time</th>
+                                    <th scope="col">Room Number</th>
+                                    
+                                  </tr>
+                                </thead>
+                             <tbody>{% for appoint in query %} <!--For loop-->
+                                  <tr>
+                                    <th scope="row">{{appoint.user}}</th>
+                                    <td>{{appoint.date}}</td>
+                                    <td>{{appoint.time_start}} - {{appoint.time_end}}</td>
+                                    <td>{{appoint.room_number}}</td>
+                                  </tr>{% endfor %}<!--End For loop--> 
+
+                                </tbody>
+                            </table>
+                                                                                             
+              </div>
+       
+          </div>
+      </div>
+      </div>
+
+      <div class="footer">
+           <div class="container">
+          <div class="row">
+              <div class="col-sm-12">
+                             Copyright 2018 , Developed By Saroar                      
+              </div>
+       
+          </div>
+      </div>
+      </div>
+
+
+
+    
+{% endblock common_student %}
+
+
+

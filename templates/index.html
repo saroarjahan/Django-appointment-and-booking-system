@@ -1,0 +1,43 @@
+{% extends 'common.html' %}
+
+{% block body%}
+    <div class="login">
+           <div class="container height">
+				  <div class="row">
+					    <div class="col-sm-6 offset-md-3">
+
+	                            <h2 class="Login">Login To Continue</h2><br>
+	                           <form method="POST" action=""> {% csrf_token %}
+						    		<div class="input-group mb-3">
+									  <div class="input-group-prepend">
+									    <span class="input-group-text" id="basic-addon1"><i class="far fa-user"></i></span>
+									  </div>
+									  <input type="text" class="form-control" name="username" autofocus="" required="" id="id_username" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+									  
+									</div>
+
+									<div class="input-group mb-3">
+									  <div class="input-group-prepend">
+									    <span class="input-group-text" id="basic-addon1">*</span>
+									  </div>
+									  <input type="password" name="password" required="" id="id_password" class="form-control" placeholder="Password" aria-label="Username" aria-describedby="basic-addon1">
+									</div>
+
+									<div class="input-group mb-3">
+									  <input type="submit" class="form-control submit" placeholder="submit" aria-label="submit" aria-describedby="basic-addon1">
+									</div>
+								</form>
+
+
+								<a class="regi" href="{% url 'register_teacher'%}">Sign Up For Teacher</a> | 
+								<a class="regi" href="{% url 'register_student'%}">Sign Up For Student</a>     
+					    </div>
+
+	     
+
+				  </div>
+			</div>
+</div>
+
+{%endblock%}
+							

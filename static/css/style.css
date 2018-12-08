@@ -1,0 +1,123 @@
+.container.height {
+    padding-top: 217px;
+}
+.login {
+    height: 723px;
+    background: url(image/background.jpg);
+}
+
+h2.Login {
+    text-align: center;
+    font-size: 23px;
+    font-weight: normal;
+}
+
+input.form-control.submit {
+    background: #11265f;
+    color: white;
+    border: 1px solid #11265f;
+}
+
+.row.studnet_nav {
+    background: hsl(0, 0%, 16%);
+    PADDING: 5PX;
+}
+
+.row.studnet_nav {
+    background: black;
+    color: white;
+    padding: 9px;
+    padding-top: 20px;
+}
+
+h3.appointmnet_list {
+    padding: 19px 0px 10px 0px;
+    font-weight: normal;
+    font-size: 27px;
+}
+
+
+span.high {
+    font-weight: bold;
+    color: #730b0b;
+}
+
+
+p.app {
+    font-size: 22px;
+}
+
+.student .row {
+    background: #f1f1f1;
+}
+
+p.app {
+    font-size: 18px;
+    line-height: 14px;
+    font-family: cursive;
+}
+body {font-family: cursive;!important}
+
+.footer .row {
+    background: #595959;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    padding: 13px;
+}
+
+li.nav-item p {
+    padding: 8px;
+}
+
+h3.appointmnet_list {
+    padding: 19px 0px 6px 0px;
+    margin-bottom: 27px;
+    font-weight: normal;
+    font-size: 27px;
+}
+
+.min-height h3.appointmnet_list {
+    padding: 0px 0px 6px 0px;
+    margin-bottom: 9px;
+    font-weight: normal;
+    font-size: 27px;
+}
+
+.row.min-height {
+    background: #f1f1f1;
+    padding: 20px 67px 36px 67px;
+}
+
+.row.main_boder {
+    margin-bottom: 27px;
+    border-bottom: 1px solid #00000014;
+}
+
+.row.min-height {
+    background: #f1f1f1;
+    padding: 40px 67px 36px 67px;
+    min-height: 591px;
+}
+
+.row.size {
+    padding: 20px 67px 36px 67px;
+    min-height: 591px;
+}
+
+.main_boder {
+    border-bottom: 1px solid #00000014;
+}
+
+img.avatar {
+    max-width: 73px;
+}
+
+span.inline button {
+    padding: 0px;
+    margin-bottom: 5px;
+}
+
+span.inline {
+    display: block;
+}

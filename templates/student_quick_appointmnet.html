@@ -1,0 +1,70 @@
+{% extends 'common_student.html' %}
+
+{% block common_student %}
+
+   <div class="student">
+           <div class="container">
+				  <div class="row min-height">
+					    <div class="col-sm-12">
+                             
+                            <div class="row main_boder">
+                                <div class="col-sm-7">
+                                     <h3 class="appointmnet_list">Quick Appointmnet</h3>
+                                </div>
+                                <div class="col-sm-5">
+                                      <form class="form-inline my-2 my-lg-0" method="GET" action="">
+                                          <input class="form-control mr-sm-2" type="text" name="q" placeholder="Search By Teacher Name" placeholder="Search With Name" aria-label="Search">
+                                          <button class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Search">Search</button>
+                                       </form>
+                                </div>
+ 
+                            </div>
+                             
+                             <table class="table">
+                                 <thead>
+                                  <tr>
+                                    <th scope="col">Teacher Name</th>
+                                    <th scope="col">Profile Picture</th>
+                                    <th scope="col">Date</th>
+                                    <th scope="col">Available Free Time</th>
+                                  </tr>
+                                </thead>
+                                <tbody>{% for appoint in query %} <!--For loop-->
+                                  {% if appoint.appointment_with == '' %} <!--only bookabe appointment-->
+                                  <tr>
+                                    <th scope="row">{{appoint.user}}</th>
+                                    <td><img class="avatar" src="http://127.0.0.1:8000/static/css/image/teacher.png"></td>
+                                    <td>{{appoint.date}}</td>
+                                    <td> 
+                                      <span class="inline">{{appoint.time_start}} - {{appoint.time_end}} 
+                                          {{appoint.room_number}}<a href='{% url "appointment_update" id=appoint.id %}'> <button class="btn btn-primary" type="submit">Book Now</button></a></span> 
+                                    </td>
+                                   {% endif %}
+                                  </tr>{% endfor %}<!--End For loop-->
+                                </tbody>
+                            </table>  
+	                                 
+					    </div>
+	     
+				  </div>
+			</div>
+      </div>
+
+      <div class="footer">
+           <div class="container">
+          <div class="row">
+              <div class="col-sm-12">
+                             Copyright 2018 , Developed By Saroar                      
+              </div>
+       
+          </div>
+      </div>
+      </div>
+
+
+
+    
+{% endblock common_student %}
+
+
+

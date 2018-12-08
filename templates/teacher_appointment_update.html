@@ -1,0 +1,122 @@
+{% extends 'common_teacher.html' %}
+
+{% block common_teacher %}
+
+   <div class="student">
+           <div class="container">
+          <div class="row min-height">
+              <div class="col-sm-12">
+                             
+                            <div class="row main_boder">
+                                <div class="col-sm-7">
+                                     <h3 class="appointmnet_list">Create Appointment</h3>
+                                </div>
+                                <div class="col-sm-5">
+                                      <form class="form-inline my-2 my-lg-0" method="GET" action="">
+                                          <input class="form-control mr-sm-2" type="text" name="q" placeholder="Search Date" placeholder="Search With Name" aria-label="Search">
+                                          <button class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Search">Search</button>
+                                       </form>
+
+                                </div>
+ 
+ 
+                            </div>
+
+                          <form method="POST" action="">{% csrf_token %}
+                               <div class="row" id="datepairExample">
+                                  <div class="col">
+                                    <input type="text" class="form-control date start"  name="{{form.date.name}}" required id="id_{{form.date.name}}" placeholder="{{form.date.value}}">
+                                  </div>
+                                  <div class="col">
+                                    <input type="text" class="form-control time start" name="{{form.time_start.name}}" required id="id_{{form.time_start.name}}" required placeholder="{{form.time_start.value}}">
+                                  </div> to
+                                  <div class="col">
+                                    <input type="text" class="form-control time end" name="{{form.time_end.name}}" required id="id_{{form.time_end.name}}" required placeholder="{{form.time_end.value}}">
+                                  </div>
+
+                                  <div class="col">
+                                    <input type="text" class="form-control" name="{{form.room_number.name}}" required id="id_{{form.room_number.name}}" required placeholder="{{form.room_number.value}}">
+                                  </div>
+
+                                  <div class="col">
+                                    <button type="submit" class="btn btn-success">Update <i class="fas fa-pen-alt"></i></button>
+                                  </div>
+
+                                </div>
+                             </form>
+                             <br>
+      </div>
+
+      <script>
+      $('#datepairExample .time').timepicker({
+        'showDuration': true,
+        'timeFormat': 'g:ia'
+      });
+
+      $('#datepairExample .date').datepicker({
+        'format': 'd/m/yyyy',
+        'autoclose': true
+      });
+
+      $('#datepairExample').datepair();
+      </script>
+
+                             <table class="table">
+                                       <thead>
+                                        <tr>
+                                          <th scope="col">Date</th>
+                                          <th scope="col">Time</th>
+                                          <th scope="col">Room Number</th>
+                                          
+                                        </tr>
+                                      </thead>{% for appoint in query %} <!--For Loop for all post -->
+                                      {% if appoint.appointment_with != '' %} <!--Filter only those are booked-->
+                                      <tbody>
+                                        <tr>
+                                          <td>{{appoint.date}}</td>
+                                          <td>{{appoint.time_start}} - {{appoint.time_end}}</td>
+                                          <td>{{appoint.room_number}}</td>
+                                          <td><button title="Already booked, Not editable" type="button" class="btn btn-primary">Booked By: {{appoint.appointment_with}}</button></td>
+                                          </td>
+                                        </tr>
+                                      </tbody>{% endif %}
+
+                                      {% if appoint.appointment_with == '' %}<!--Filter Those not Booked yet-->
+                                      <tbody>
+                                        <tr>
+                                          <td>{{appoint.date}}</td>
+                                          <td>{{appoint.time_start}} - {{appoint.time_end}}</td>
+                                          <td>{{appoint.room_number}}</td>
+                                          <td><a href='{% url "appointment_delete" id=appoint.id %}'><button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button></a> <a href='{% url "teacher_appointment_update" id=appoint.id %}'><button type="submit" class="btn btn-danger"><i class="far fa-edit"></i></button></a></td>
+
+                                        </tr>
+                                        
+                                      </tbody>{% endif %}
+
+                                      {% endfor %}
+                              </table>
+                            
+
+
+              </div>
+       
+          </div>
+      </div>
+      </div>
+
+      <div class="footer">
+           <div class="container">
+          <div class="row">
+              <div class="col-sm-12">
+                             Copyright 2018 , Developed By Saroar                      
+              </div>
+       
+          </div>
+      </div>
+      </div>
+
+    
+{% endblock common_teacher %}
+
+
+

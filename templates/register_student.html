@@ -1,0 +1,48 @@
+{% extends 'common.html' %}
+
+{% block body%}
+<div class="register_student">
+				<div class="container height">
+				  <div class="row">
+				    <div class="col-md-6 offset-md-3">
+
+                            <h2 class="Login">Sign Up for Studnet Account</h2><br>
+				    		<div class="input-group mb-3">
+							  <div class="input-group-prepend">
+							    <span class="input-group-text" id="basic-addon1"><i class="far fa-user"></i></span>
+							  </div>
+							  <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+							</div>
+
+							<div class="input-group mb-3">
+							  <div class="input-group-prepend">
+							    <span class="input-group-text" id="basic-addon1"><i class="fas fa-file-signature"></i></span>
+							  </div>
+							  <input type="text" class="form-control" placeholder="Full Name" aria-label="Name" aria-describedby="basic-addon1">
+							</div>
+
+							<div class="input-group mb-3">
+							  <div class="input-group-prepend">
+							    <span class="input-group-text" id="basic-addon1"><i class="far fa-id-badge"></i></span>
+							  </div>
+							  <input type="number" class="form-control" placeholder="Studnet Number" aria-label="number" aria-describedby="basic-addon1">
+							</div>
+
+							<div class="input-group mb-3">
+							  <div class="input-group-prepend">
+							    <span class="input-group-text" id="basic-addon1">*</span>
+							  </div>
+							  <input type="password" class="form-control" placeholder="Password" aria-label="pass" aria-describedby="basic-addon1">
+							  <input type="password" class="form-control" placeholder="Repeat Password" aria-label="repeat_pass" aria-describedby="basic-addon1">
+							</div>
+
+							<div class="input-group mb-3">
+								  <input type="submit" class="form-control submit" placeholder="submit" aria-label="submit" aria-describedby="basic-addon1">
+							</div>
+
+							<a class="regi" href="http://127.0.0.1:8000">Back To Login</a>	      
+				    </div>               
+				  </div>
+				</div>	
+</div>		
+{%endblock%}

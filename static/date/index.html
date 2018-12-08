@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript" src="jquery.timepicker.js"></script>
+	<link rel="stylesheet" type="text/css" href="jquery.timepicker.css" />
+	<script type="text/javascript" src="bootstrap-datepicker.js"></script>
+	<link rel="stylesheet" type="text/css" href="bootstrap-datepicker.css"/>
+	<script src="http://jonthornton.github.io/Datepair.js/dist/datepair.js"></script>
+	<script src="http://jonthornton.github.io/Datepair.js/dist/jquery.datepair.js"></script>
+</head>
+
+<body>
+
+
+					<p id="datepairExample">
+						<input type="text" class="date start" />
+						<input type="text" class="time start" /> to
+						<input type="text" class="time end" />
+					</p>
+			</div>
+
+			<script>
+			$('#datepairExample .time').timepicker({
+				'showDuration': true,
+				'timeFormat': 'g:ia'
+			});
+
+			$('#datepairExample .date').datepicker({
+				'format': 'm/d/yyyy',
+				'autoclose': true
+			});
+
+			$('#datepairExample').datepair();
+			</script>
+			
+</body>
+
+</html>
