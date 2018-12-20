@@ -14,3 +14,27 @@ https://docs.djangoproject.com/en/2.1/howto/deployment/wsgi/modwsgi/(**)
 https://docs.djangoproject.com/en/2.1/howto/deployment/wsgi/modwsgi/(**)
 https://medium.com/@_christopher/deploying-my-django-app-to-a-real-server-part-ii-f0c277c338f4(*)
 https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/ (***)
+
+
+(iv)Deployment in localhost windows pc: 
+To run this project in localhost , we have to setup python, pip, virtualenv and django.
+Frist,  we have to make sure that we  have install pip and python in our pc.
+1. Run Windows Powershell as Administrator
+
+We have to create a new directory to install virtualenv . Browse that directory via command and run 
+
+2. pip install virtualenv
+3. virtualenv .
+4. Scripts\activate
+
+Now we have to create another directory inside virtualenv, then we have to install django inside it. Browse that new directory via command line and install django inside it.
+
+5. pipenv install django
+
+Copy our whole our project inside django directory and run 
+python .\manage.py runserver
+
+After successfully deployment we will  require this User access for the project: 
+Supersuer: admin (url: http://127.0.0.1:8000/admin)
+Other User: Teacher1, Teacher2, Student1, Student2 (url: http://127.0.0.1:8000/)
+password for all admin and user: Saroar123
