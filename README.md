@@ -22,7 +22,7 @@ To run this project in localhost , we have to setup python, pip, virtualenv and 
 Frist,  we have to make sure that we  have install pip and python in our pc.
 1. Run Windows Powershell as Administrator
 
-We have to create a new directory to install virtualenv . Browse that directory via command and run 
+We have to create a new directory to install virtualenv . Browse that directory via command and run. separate virtual server for each project is best, it will not affect other project library.
 
 2. pip install virtualenv
 3. virtualenv .
