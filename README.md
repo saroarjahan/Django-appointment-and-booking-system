@@ -16,7 +16,8 @@ https://medium.com/@_christopher/deploying-my-django-app-to-a-real-server-part-i
 https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/ (***)
 
 
-(iv)Deployment in localhost windows pc: 
+Deployment in localhost windows pc:
+####################################
 To run this project in localhost , we have to setup python, pip, virtualenv and django.
 Frist,  we have to make sure that we  have install pip and python in our pc.
 1. Run Windows Powershell as Administrator
