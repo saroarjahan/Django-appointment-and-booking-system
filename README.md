@@ -1,6 +1,19 @@
 # Django-appointment-and-booking-system
 A complete python , django project for booking and appoientment for teacher and student
-References
+
+#This  web application has several important features :
+(i) Easy appointment creation  for teacher 
+(ii) Easy date picker, time picker and auto time suggestion while creating new appointment
+(ii) Appointment edit and deletion  option 
+(iv) Success notification
+(v) Search  option with numeric and string
+(vi) Calendar Integration
+(vii) Central administrator
+(viii) Different type of profile group like Teacher and Student 
+(ix) Modular Login system
+
+
+#References
 To understand this project in code level we highly recommend  to have a good knowledge in python 3 (we have used 3.70), python web framework django (2.1.3). We also recommend to know little about javascript and its framework vue.js. We have used calendar integration and date picker with pure javascript, jQuery and vue.js. In calendar integration we have used Jason formatted data, so it's good have idea  about Jason. Finally, we recommend to have knowledge about html css, we have used bootstrap  framework for html and css. We also recommend to have very clear knowledge about foreign key relationship and sqlite3 database. 
 https://www.djangoproject.com/ (***)
 https://www.python.org/ (***)
