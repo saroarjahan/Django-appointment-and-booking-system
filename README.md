@@ -46,7 +46,7 @@ Now we have to create another directory inside virtualenv, then we have to insta
 
 5. pipenv install django
 
-Copy our whole our project inside django directory and run 
+Copy this  whole oproject inside django directory, browse the app and run 
 python .\manage.py runserver
 
 After successfully deployment we will  require this User access for the project: 
