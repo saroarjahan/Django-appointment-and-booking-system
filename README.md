@@ -55,4 +55,5 @@ Other User: Teacher1, Teacher2, Student1, Student2 (url: http://127.0.0.1:8000/)
 password for all admin and user: Saroar123
 
 *Inside project some url is not dynamically set, I forget to do that
-*See the screens.pdf for scrrenshot of the project
+
+**See the screens.pdf for scrrenshot of the project
