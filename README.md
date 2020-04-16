@@ -1,5 +1,5 @@
 # Django-appointment-and-booking-system
-A complete python , django project for booking and appoientment for teacher and student
+A  python prototype Django project for booking and appoientment for teacher and student
 
 #This  web application has several important features :
 (i) Easy appointment creation  for teacher 
@@ -53,3 +53,6 @@ After successfully deployment we will  require this User access for the project:
 Supersuer: admin (url: http://127.0.0.1:8000/admin)
 Other User: Teacher1, Teacher2, Student1, Student2 (url: http://127.0.0.1:8000/)
 password for all admin and user: Saroar123
+
+*Inside project some url is not dynamically set, I forget to do that
+*See the screens.pdf for scrrenshot of the project
